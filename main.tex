@@ -1,0 +1,130 @@
+% ========================
+% PREÁMBULO
+% ========================
+
+\documentclass{CEI_slides} % Import document class (CEI_slides.cls)
+
+% ========================
+% CUSTOMIZABLE INFORMATION
+% ========================
+% General information
+\newcommand{\speaker}       {Autor Autorez}
+\newcommand{\contact}       {autor.autorez@mail.int}
+\newcommand{\customdate}    {DD/MM/YYYY}
+\newcommand{\titulouno}     {Presentation-style template}
+\newcommand{\titulodos}     {in \LaTeX~(Overleaf)}
+\newcommand{\titulotres}    {with corporate design}
+\newcommand{\titulocuatro}  {from CEI}
+\newcommand{\tituloreducido}{Presentation-style template in \LaTeX~with corporate design from CEI}
+
+
+% ========================
+% PRESENTATION
+% ========================
+
+\begin{document}
+
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+\frameNoSubtitle{Itemize format}{
+    Itemize environment has been configured to have a square in the first level, a circle in the second level and an arrow in the third one. All bullets are colored using corporative blue.
+
+    \vspace{0.5cm}
+    
+    \begin{itemize}
+        \item Level 1
+        \begin{itemize}
+            \item Level 2
+            \begin{itemize}
+                \item Level 3
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+}
+
+
+\frameWithSubtitle{Enumerate format}{With subtitle}{
+    The enumerate format is quite standard. Corporative blue color has been choose to highlight the levels.
+
+    \vspace{0.5cm}
+
+    \begin{enumerate}
+        \item Level 1
+        \begin{enumerate}
+            \item Level 2
+            \begin{enumerate}
+                \item Level 3
+            \end{enumerate}
+        \end{enumerate}
+    \end{enumerate}
+}
+
+\frameWithSubtitle{Advantages and disadvantages}{Bullet possibilities}{
+    In this case, you will need to manually specify each of the bullet points. It is still quite easy :)
+
+    \vspace{0.5cm}
+    
+    \begin{itemize}
+        \item[\advA] First advantage
+        \item[\disA] First disadvantage
+        \item[\advB] Second advantage
+        \item[\disB] Second disadvantage
+        \item[\advC] Third advantage
+        \item[\disC] Third disadvantage
+    \end{itemize}
+}
+
+\frameWithSubtitle{Figures and Tables}{\texttt{easyPlacing} function}{
+    \easyPlacing{40pt}{80pt}{
+        \includegraphics[width=5cm]{example-image-a}
+    }
+    
+    \easyPlacing{250pt}{100pt}{
+        \begin{tabular}{l l l}
+        \textbf{Name} & \textbf{Age} & \textbf{City} \\ \toprule
+        Ana    & 25 & Madrid \\ \hline
+        Luis   & 30 & Barcelona \\ \hline
+        Marta  & 28 & Valencia \\ \toprule
+        \end{tabular}
+    }
+}
+
+
+\frameWithSubtitle{Animations}{\texttt{pause} command}{
+    \begin{itemize}
+        \item To make some text appear, simply use \texttt{pause}. \\
+        \pause
+        \item This will automatically generate slides to resemble text is appearing sequentially (maintaining the slide number). \\
+        \pause
+        \item It works with other elements (not if you use \texttt{easyPlacing} command).
+    \end{itemize}
+}
+
+\framesection{Section title}{Section subtitle}
+
+\framesectiondark{Section title}{Section subtitle}
+
+\frameQA
+
+\framePR
+
+\frameNoSubtitle{Referencing resources}{
+    \refleft{9cm}{85pt}{60pt}{6pt}{\sreference}
+    \refright{9cm}{85pt}{100pt}{6pt}{\sreference}
+    \bookleft{9cm}{85pt}{140pt}{6pt}{\sreference}
+    \bookright{9cm}{85pt}{180pt}{6pt}{\sreference}
+}
+
+\frameNoSubtitle{Rectangular boxes}{
+    \basicbox{7cm}{20pt}{50pt}{ceiDarkBlue}{Abstract}{\stext}
+    \basicbox{7cm}{240pt}{50pt}{ceiPurple}{Abstract}{\stext}
+    \basicbox{7cm}{20pt}{140pt}{ceiOrange}{Abstract}{\stext}
+    \basicbox{7cm}{240pt}{140pt}{ceiGreen}{Abstract}{\stext}
+
+    \polladeagua{5pt}{430pt}{47pt}
+    \pitoiberico{3pt}{218.5pt}{80pt}
+}
+
+\end{document}
